@@ -1,13 +1,32 @@
 @import "~normalize.css";
 
-@import "_variables";
-@import "modules/hello.scss";
-
-body {
-  background: $wtf;
-  color: #fff;
+.container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  flex-direction: column;
+}
+
+.beer {
+  display: grid;
+  grid-template-columns: 15% 1fr;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title {
+    font-size: 48px;
+  }
+  &__tagline {
+    font-size: 32px;
+    font-weight: 500;
+  }
+  &__description {
+    max-width: 800px;
+    font-size: 24px;
+  }
+  &__image {
+    height: 600px;
+    margin: 32px auto;
+  }
 }
